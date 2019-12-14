@@ -8,30 +8,9 @@ P2: Nén nâng cao*/
 
 #include <iostream>
 #include<fstream>
-#include <string>
 #include"compressString.h"
 
 int main() {
-	/*
-	string input;
-	char c;
-	try {
-		cout << "Enter the data to be compressesed: " << endl;
-		cin >> input;
-		for (int z = 0; z < input.length(); ++z) {
-			c = input.at(z);
-		}
-		if (!(c >= 'a' && c <= 'z')) {
-			throw runtime_error("error: invalid input");
-		}
-	}
-	catch (runtime_error& excpt) {
-		cout << excpt.what() << endl;
-		return 0;
-	}
-	cout << "The compressed data is " << compression(input) << endl;
-	*/
-	
 
 	fstream inFile, outFile;
 	//         
@@ -71,6 +50,15 @@ int main() {
 		// Ghi vào file
 		if (i > 0) outFile << endl;
 		outFile << compression(listString[i]);
+	}
+	cout << "\n------------------------------------------------";
+
+	cout << endl << "\nEXTRACTED DATA ";
+	cout << "\n------------------------------------------------";
+	for (int i = 0; i < lenListString; i++)
+	{
+		// In chuỗi được nén
+		cout << endl << extraction(compression(listString[i]));
 	}
 	cout << "\n------------------------------------------------";
 	outFile.close();
