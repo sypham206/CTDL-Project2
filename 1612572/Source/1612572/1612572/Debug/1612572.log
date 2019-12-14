@@ -1,2 +1,3 @@
 ﻿  main.cpp
+D:\CTDL DA2\CTDL-Project2\1612572\Source\1612572\1612572\main.cpp(65,1): warning C4326:  return type of 'main' should be 'int' instead of 'void'
   1612572.vcxproj -> D:\CTDL DA2\CTDL-Project2\1612572\Source\1612572\Debug\1612572.exe
